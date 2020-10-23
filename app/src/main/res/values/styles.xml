@@ -1,10 +1,44 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnSurface">@color/colorInactive</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="textInputStyle">@style/CustomInputLayoutStyle</item>
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
     </style>
 
+    <style name="CustomInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="boxBackgroundColor">@color/colorWhite</item>
+        <item name="hintTextColor">@color/colorBlue</item>
+    </style>
+
+    <style name="LogoTextStyle">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="background">@drawable/button_background</item>
+    </style>
+
+    <style name="HeaderTextStyle">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="BottomTextStyle">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorLink">@color/colorBlue</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textSize">8sp</item>
+    </style>
 </resources>
