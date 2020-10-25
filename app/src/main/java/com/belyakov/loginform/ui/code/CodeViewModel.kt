@@ -38,9 +38,15 @@ class CodeViewModel : ViewModel(), KoinComponent {
 
     private val verificationCallback: OnCompleteListener<AuthResult> =
         OnCompleteListener<AuthResult> { task ->
-            val uid = task.result?.user?.uid
-            if (task.isSuccessful && uid != null) {
-                dataInteractor.checkUserIsRegistered(uid, checkRegisteredCallback)
+            if (task.isSuccessful) {
+                if (task.result?.user?.uid != null) {
+                    dataInteractor.checkUserIsRegistered(
+                        task.result?.user?.uid ?: "",
+                        checkRegisteredCallback
+                    )
+                } else {
+                    confirmationResult.postValue(NOT_CONFIRMED)
+                }
             } else {
                 confirmationResult.postValue(NOT_CONFIRMED)
             }

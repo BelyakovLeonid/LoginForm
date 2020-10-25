@@ -24,6 +24,7 @@ class CodeFragment : Fragment(R.layout.f_code) {
             findNavController().navigateUp()
         }
         nextButton.setOnClickListener {
+            nextButton.isEnabled = false
             viewModel.checkCode(codeInputText.text.toString())
         }
     }
@@ -33,6 +34,7 @@ class CodeFragment : Fragment(R.layout.f_code) {
     }
 
     private fun handleVerificationResult(result: ConfirmationResult) {
+        nextButton.isEnabled = true
         when (result) {
             ConfirmationResult.NOT_REGISTERED -> findNavController().navigate(R.id.action_codeFragment_to_registrationFragment)
             ConfirmationResult.CONFIRMED -> findNavController().navigate(R.id.action_codeFragment_to_profileFragment)

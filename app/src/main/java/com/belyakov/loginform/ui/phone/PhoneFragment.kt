@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.belyakov.loginform.R
 import com.belyakov.loginform.ui.phone.VerificationResult.*
 import com.belyakov.loginform.utils.observeEvent
+import com.belyakov.loginform.utils.showKeyboard
 import kotlinx.android.synthetic.main.f_phone.*
 
 
@@ -24,6 +25,14 @@ class PhoneFragment : Fragment(R.layout.f_phone) {
 
     private fun handleView() {
         linkText.movementMethod = LinkMovementMethod.getInstance()
+        phoneInputText.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                showKeyboard()
+                phoneInputText.hint = getString(R.string.phone_start)
+            } else {
+                phoneInputText.hint = null
+            }
+        }
         nextButton.setOnClickListener {
             nextButton.isEnabled = false
             viewModel.verifyPhone(phoneInputText.text.toString())
