@@ -20,7 +20,6 @@ class CodeFragment : Fragment(R.layout.f_code) {
     }
 
     private fun handleView() {
-        findNavController().navigate(R.id.action_codeFragment_to_registrationFragment) //todo remove
         backButton.setOnClickListener {
             findNavController().navigateUp()
         }

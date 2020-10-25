@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
         android:src="@drawable/ic_setting"
         app:layout_constraintBottom_toBottomOf="@id/exitButton"
         app:layout_constraintEnd_toStartOf="@id/exitButton"
@@ -43,6 +44,7 @@
 
     <TextView
         android:id="@+id/fioText"
+        style="@style/HeaderTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -52,6 +54,7 @@
 
     <TextView
         android:id="@+id/birthText"
+        style="@style/NormalTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
@@ -60,6 +63,7 @@
 
     <TextView
         android:id="@+id/sexText"
+        style="@style/NormalTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -68,6 +72,7 @@
 
     <TextView
         android:id="@+id/emailText"
+        style="@style/NormalTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"

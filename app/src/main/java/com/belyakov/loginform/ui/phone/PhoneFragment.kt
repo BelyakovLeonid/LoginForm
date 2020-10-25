@@ -23,7 +23,6 @@ class PhoneFragment : Fragment(R.layout.f_phone) {
     }
 
     private fun handleView() {
-        findNavController().navigate(R.id.action_phoneFragment_to_codeFragment) //todo remove
         linkText.movementMethod = LinkMovementMethod.getInstance()
         nextButton.setOnClickListener {
             nextButton.isEnabled = false
