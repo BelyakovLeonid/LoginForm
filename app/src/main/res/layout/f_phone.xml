@@ -27,17 +27,15 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:background="@drawable/edit_text_background"
             android:id="@+id/phoneInputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"
         android:text="@string/next"
-        android:textSize="14sp"
-        android:letterSpacing="0.05"
-        android:background="@drawable/button_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"

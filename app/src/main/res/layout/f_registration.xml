@@ -27,63 +27,67 @@
         app:layout_constraintTop_toTopOf="@id/backButton" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="40dp"
         android:id="@+id/fioInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:hint="@string/fio"
         app:layout_constraintTop_toBottomOf="@id/headerText">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/fioInputText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/birthInput"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="@string/birth"
         app:layout_constraintTop_toBottomOf="@id/fioInput">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/birthInputText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sexInput"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="@string/sex"
         app:layout_constraintTop_toBottomOf="@id/birthInput">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/sexInputText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInput"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="@string/email"
         app:layout_constraintTop_toBottomOf="@id/sexInput">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailInputText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/registrateButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
