@@ -72,7 +72,7 @@ class RegistrationFragment : Fragment(R.layout.f_registration) {
     private fun registerUser() {
         viewModel.onRegisterClicked(
             fioInputText.text.toString(),
-            sexInputText.text.toString(),
+            sexInputText.text.toString() == getString(R.string.sex_m),
             emailInputText.text.toString()
         )
     }

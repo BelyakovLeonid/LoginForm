@@ -28,4 +28,7 @@
     <string name="birth_error">Укажите дату рождения</string>
     <string name="sex_error">Укажите пол</string>
     <string name="email_error">Укажите email</string>
+    <string name="birth_template">Дата рождения: %1s</string>
+    <string name="sex_template">Пол: %1s</string>
+    <string name="email_template">E-mail: %1s</string>
 </resources>

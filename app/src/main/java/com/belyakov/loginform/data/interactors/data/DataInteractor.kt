@@ -7,5 +7,6 @@ import com.google.firebase.database.ValueEventListener
 interface DataInteractor {
     fun checkUserIsRegistered(uid: String, callback: ValueEventListener)
     fun postProfileSnapshot(snapshot: DataSnapshot)
+    fun createProfile(profile: Profile)
     fun getCurrentProfile(): Profile?
 }
