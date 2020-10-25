@@ -22,18 +22,22 @@ class RegistrationFragment : Fragment(R.layout.f_registration) {
     }
 
     private fun handleView() {
-        val adapter = ArrayAdapter(
-            requireContext(),
-            R.layout.v_dropdown_item,
-            listOf(getString(R.string.sex_m), getString(R.string.sex_f))
-        )
-        sexInputText.setAdapter(adapter)
+        setupDropDownSexMenu()
         registrateButton.setOnClickListener {
             registerUser()
         }
         backButton.setOnClickListener {
             findNavController().navigateUp()
         }
+    }
+
+    private fun setupDropDownSexMenu() {
+        val adapter = ArrayAdapter(
+            requireContext(),
+            R.layout.v_dropdown_item,
+            listOf(getString(R.string.sex_m), getString(R.string.sex_f))
+        )
+        sexInputText.setAdapter(adapter)
     }
 
     private fun observeViewModel() {

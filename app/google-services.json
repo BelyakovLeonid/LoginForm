@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "604858372794",
+    "firebase_url": "https://loginform-a74b3.firebaseio.com",
+    "project_id": "loginform-a74b3",
+    "storage_bucket": "loginform-a74b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604858372794:android:e83562d64ba0eec7656883",
+        "android_client_info": {
+          "package_name": "com.belyakov.loginform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604858372794-shj20aclsm7uuvu9mdlle0k65mu710mo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApUxMmDrO90Cu01al6H8mttfyzI5h4waU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604858372794-shj20aclsm7uuvu9mdlle0k65mu710mo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

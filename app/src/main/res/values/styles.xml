@@ -13,6 +13,7 @@
 
     <style name="CustomInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="errorEnabled">true</item>
         <item name="boxBackgroundColor">@color/box_background</item>
         <item name="hintTextColor">@color/colorBlue</item>
     </style>

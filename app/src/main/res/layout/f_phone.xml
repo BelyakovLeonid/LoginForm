@@ -10,14 +10,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logo_name"
-        app:layout_constraintBottom_toTopOf="@id/phoneEditText"
+        app:layout_constraintBottom_toTopOf="@id/phoneInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phoneEditText"
+        android:id="@+id/phoneInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -27,21 +27,22 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:background="@drawable/edit_text_background"
-            android:id="@+id/phoneInputField"
+            android:id="@+id/phoneInputText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:inputType="phone"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"
-        android:text="@string/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="30dp"
+        android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/phoneEditText" />
+        app:layout_constraintTop_toBottomOf="@id/phoneInput" />
 
     <TextView
         android:id="@+id/linkText"

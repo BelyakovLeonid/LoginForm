@@ -4,12 +4,17 @@
     <string name="exit_hint">Нажмите еще раз для выхода</string>
 
     <string name="logo_name">Logo | Name</string>
-    <string name="phone_number">Ваш номер телефона</string>
     <string name="text_link">НАЖИМАЯ ДАЛЕЕ, ВЫ СОГЛАШАЕТЕСЬ С\n<a href="https://www.ster23.ru">ПОЛИТИКОЙ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a></string>
-    <string name="phone_start">+7</string>
-    <string name="code_sms">Код из смс</string>
     <string name="fio">Фамилия Имя Отчество</string>
+    <string name="fio_template">%1s\n%2s %3s</string>
     <string name="birth">Дата рождения</string>
+
+    <string name="phone_number">Ваш номер телефона</string>
+    <string name="phone_error">Некорректный номер</string>
+    <string name="phone_start">+7</string>
+
+    <string name="code_sms">Код из смс</string>
+    <string name="code_error">Неправильный код</string>
 
     <string name="sex">Пол</string>
     <string name="sex_m">Мужчина</string>

@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.belyakov.loginform.R
-import com.belyakov.loginform.utils.observe
+import com.belyakov.loginform.utils.observeEvent
 import kotlinx.android.synthetic.main.f_code.*
 
 class CodeFragment : Fragment(R.layout.f_code) {
@@ -24,21 +24,19 @@ class CodeFragment : Fragment(R.layout.f_code) {
             findNavController().navigateUp()
         }
         nextButton.setOnClickListener {
-            viewModel.checkCode(11)
+            viewModel.checkCode(codeInputText.text.toString())
         }
     }
 
     private fun observeViewModel() {
-        observe(viewModel.confirmationResult) {
-            when (it) {
-                ConfirmationResult.NOT_REGISTERED -> findNavController().navigate(R.id.action_codeFragment_to_registrationFragment)
-                ConfirmationResult.CONFIRMED -> findNavController().navigate(R.id.action_codeFragment_to_profileFragment)
-                else -> showConfirmationError()
-            }
-        }
+        observeEvent(viewModel.confirmationResult, ::handleVerificationResult)
     }
 
-    private fun showConfirmationError() {
-
+    private fun handleVerificationResult(result: ConfirmationResult) {
+        when (result) {
+            ConfirmationResult.NOT_REGISTERED -> findNavController().navigate(R.id.action_codeFragment_to_registrationFragment)
+            ConfirmationResult.CONFIRMED -> findNavController().navigate(R.id.action_codeFragment_to_profileFragment)
+            else -> codeInput.error = getString(R.string.code_error)
+        }
     }
 }
