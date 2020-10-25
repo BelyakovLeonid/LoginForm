@@ -24,4 +24,8 @@
     <string name="next">Далее</string>
     <string name="registration">Регистрация</string>
     <string name="registrate">Зарегистрироваться</string>
+    <string name="fio_error">Заполните ФИО</string>
+    <string name="birth_error">Укажите дату рождения</string>
+    <string name="sex_error">Укажите пол</string>
+    <string name="email_error">Укажите email</string>
 </resources>

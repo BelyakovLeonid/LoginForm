@@ -9,12 +9,17 @@ class RegistrationViewModel: ViewModel() {
     private val _isUserRegistered = LiveEvent<Boolean>()
     val isUserRegistered: LiveData<Boolean> = _isUserRegistered
 
+    private var birthDate: Long? = null
+
     fun onRegisterClicked(
         fio: String,
-        birth: String,
         sex: String,
         email: String
     ) {
         _isUserRegistered.value = true
+    }
+
+    fun onBirthDatePicked(dateMillis: Long) {
+        birthDate = dateMillis
     }
 }

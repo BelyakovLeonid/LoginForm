@@ -20,6 +20,7 @@ class CodeFragment : Fragment(R.layout.f_code) {
     }
 
     private fun handleView() {
+        findNavController().navigate(R.id.action_codeFragment_to_registrationFragment) //todo remove
         backButton.setOnClickListener {
             findNavController().navigateUp()
         }
@@ -36,7 +37,7 @@ class CodeFragment : Fragment(R.layout.f_code) {
         when (result) {
             ConfirmationResult.NOT_REGISTERED -> findNavController().navigate(R.id.action_codeFragment_to_registrationFragment)
             ConfirmationResult.CONFIRMED -> findNavController().navigate(R.id.action_codeFragment_to_profileFragment)
-            else -> codeInput.error = getString(R.string.code_error)
+            ConfirmationResult.NOT_CONFIRMED -> codeInput.error = getString(R.string.code_error)
         }
     }
 }

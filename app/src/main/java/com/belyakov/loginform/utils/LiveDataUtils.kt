@@ -8,8 +8,8 @@ inline fun <T> LifecycleOwner.observe(liveData: LiveData<T>?, crossinline block:
 }
 
 inline fun <T> LifecycleOwner.observeEvent(
-    liveEvent: SingleLiveEvent<T>?,
+    event: SingleLiveEvent<T>?,
     crossinline block: (T) -> Unit
 ) {
-    liveEvent?.observeEvent(this) { block.invoke(it) }
+    event?.observeEvent(this) { block.invoke(it) }
 }
