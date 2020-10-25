@@ -26,7 +26,6 @@ class PhoneViewModel : ViewModel(), KoinComponent {
             По идее, можно сразу делать signIn. Но для того чтобы сохранить воркфлоу, описанный в ТЗ, так поступать не будем
             */
             override fun onVerificationCompleted(creds: PhoneAuthCredential) {
-                authInteractor.postCredentials(creds)
                 verificationResult.postValue(VerificationCompleted(creds))
             }
 
