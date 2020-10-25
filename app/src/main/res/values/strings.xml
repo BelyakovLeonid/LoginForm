@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">LoginForm</string>
 
+    <string name="exit_hint">Нажмите еще раз для выхода</string>
+
     <string name="logo_name">Logo | Name</string>
     <string name="phone_number">Ваш номер телефона</string>
     <string name="text_link">НАЖИМАЯ ДАЛЕЕ, ВЫ СОГЛАШАЕТЕСЬ С\n<a href="https://www.ster23.ru">ПОЛИТИКОЙ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</a></string>

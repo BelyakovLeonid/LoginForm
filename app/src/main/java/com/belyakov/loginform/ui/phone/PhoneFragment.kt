@@ -13,6 +13,10 @@ class PhoneFragment : Fragment(R.layout.f_phone) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        handleView()
+    }
+
+    private fun handleView() {
         linkText.movementMethod = LinkMovementMethod.getInstance()
         nextButton.setOnClickListener {
             findNavController().navigate(R.id.action_phoneFragment_to_codeFragment)
