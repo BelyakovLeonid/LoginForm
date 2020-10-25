@@ -2,7 +2,7 @@
 Приложение выполнено в рамках тестового задания на собеседование. 
 
 Задание:
-![Задание](https://github.com/BelyakovLeonid/LoginForm/blob/master/Задание.jpg?raw=true)
+![Задание](https://github.com/BelyakovLeonid/LoginForm/blob/master/Задание.JPG?raw=true)
 
 Макет:
-![Макет](https://github.com/BelyakovLeonid/LoginForm/blob/master/Макет.jpg?raw=true)
+![Макет](https://github.com/BelyakovLeonid/LoginForm/blob/master/Задание.JPG?raw=true)
