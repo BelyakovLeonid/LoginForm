@@ -10,7 +10,11 @@
     <string name="code_sms">Код из смс</string>
     <string name="fio">Фамилия Имя Отчество</string>
     <string name="birth">Дата рождения</string>
+
     <string name="sex">Пол</string>
+    <string name="sex_m">Мужчина</string>
+    <string name="sex_f">Женщина</string>
+
     <string name="email">E-mail</string>
     <string name="next">Далее</string>
     <string name="registration">Регистрация</string>

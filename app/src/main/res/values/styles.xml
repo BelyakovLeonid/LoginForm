@@ -17,6 +17,12 @@
         <item name="hintTextColor">@color/colorBlue</item>
     </style>
 
+    <style name="CustomDropDownInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="android:textColorHint">@color/colorTextHint</item>
+        <item name="boxBackgroundColor">@color/box_background</item>
+        <item name="hintTextColor">@color/colorBlue</item>
+    </style>
+
     <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@null</item>
         <item name="rippleColor">@null</item>
