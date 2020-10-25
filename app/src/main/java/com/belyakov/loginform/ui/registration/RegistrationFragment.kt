@@ -94,6 +94,7 @@ class RegistrationFragment : Fragment(R.layout.f_registration) {
                 it.get(Calendar.MONTH),
                 it.get(Calendar.DAY_OF_MONTH)
             ).apply {
+                this.datePicker.maxDate = it.timeInMillis
                 window?.setFlags(
                     WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                     WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
