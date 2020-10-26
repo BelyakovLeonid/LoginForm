@@ -54,7 +54,11 @@ class CodeViewModel : ViewModel(), KoinComponent {
         }
 
     fun checkCode(code: String) {
-        authInteractor.verifyCode(code, verificationCallback)
+        if (code.isBlank()) {
+            confirmationResult.postValue(NOT_CONFIRMED)
+        } else {
+            authInteractor.verifyCode(code, verificationCallback)
+        }
     }
 }
 

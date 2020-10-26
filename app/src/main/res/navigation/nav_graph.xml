@@ -31,15 +31,15 @@
         <action
             android:id="@+id/action_registrationFragment_to_profileFragment"
             app:destination="@id/profileFragment"
-            app:popUpTo="@id/nav_graph"/>
+            app:popUpTo="@id/nav_graph" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.belyakov.loginform.ui.profile.ProfileFragment"
-        android:label="ProfileFragment" >
+        android:label="ProfileFragment">
         <action
             android:id="@+id/action_profileFragment_to_phoneFragment"
             app:destination="@id/phoneFragment"
-            app:popUpTo="@id/nav_graph"/>
+            app:popUpTo="@id/nav_graph" />
     </fragment>
 </navigation>

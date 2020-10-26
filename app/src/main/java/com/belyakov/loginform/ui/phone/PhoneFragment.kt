@@ -46,9 +46,9 @@ class PhoneFragment : Fragment(R.layout.f_phone) {
     private fun handleVerificationResult(result: VerificationResult) {
         nextButton.isEnabled = true
         when (result) {
-            is VerificationFailed -> phoneInput.error = getString(R.string.phone_error)
-            is VerificationCompleted,
-            is VerificationCodeSent -> {
+            VERIFICATION_FAILED -> phoneInput.error = getString(R.string.phone_error)
+            VERIFICATION_COMPLETED,
+            VERIFICATION_CODE_SENT -> {
                 phoneInput.error = null
                 findNavController().navigate(R.id.action_phoneFragment_to_codeFragment)
             }

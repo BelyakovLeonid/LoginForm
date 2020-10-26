@@ -7,6 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.belyakov.loginform.R
 import com.belyakov.loginform.data.Profile
+import com.belyakov.loginform.utils.hideKeyboard
 import com.belyakov.loginform.utils.observe
 import com.belyakov.loginform.utils.toDateString
 import kotlinx.android.synthetic.main.f_profile.*
@@ -20,6 +21,7 @@ class ProfileFragment : Fragment(R.layout.f_profile) {
         super.onViewCreated(view, savedInstanceState)
         handleView()
         observeViewModel()
+        hideKeyboard()
     }
 
     private fun handleView() {

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.belyakov.loginform.R
+import com.belyakov.loginform.ui.code.ConfirmationResult.*
 import com.belyakov.loginform.utils.observeEvent
 import kotlinx.android.synthetic.main.f_code.*
 
@@ -36,9 +37,9 @@ class CodeFragment : Fragment(R.layout.f_code) {
     private fun handleVerificationResult(result: ConfirmationResult) {
         nextButton.isEnabled = true
         when (result) {
-            ConfirmationResult.NOT_REGISTERED -> findNavController().navigate(R.id.action_codeFragment_to_registrationFragment)
-            ConfirmationResult.CONFIRMED -> findNavController().navigate(R.id.action_codeFragment_to_profileFragment)
-            ConfirmationResult.NOT_CONFIRMED -> codeInput.error = getString(R.string.code_error)
+            NOT_REGISTERED -> findNavController().navigate(R.id.action_codeFragment_to_registrationFragment)
+            NOT_CONFIRMED -> codeInput.error = getString(R.string.code_error)
+            CONFIRMED -> findNavController().navigate(R.id.action_codeFragment_to_profileFragment)
         }
     }
 }

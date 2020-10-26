@@ -26,31 +26,29 @@ class PhoneViewModel : ViewModel(), KoinComponent {
             По идее, можно сразу делать signIn. Но для того чтобы сохранить воркфлоу, описанный в ТЗ, так поступать не будем
             */
             override fun onVerificationCompleted(creds: PhoneAuthCredential) {
-                verificationResult.postValue(VerificationCompleted(creds))
+                verificationResult.postValue(VERIFICATION_COMPLETED)
             }
 
             override fun onVerificationFailed(p0: FirebaseException) {
-                verificationResult.postValue(VerificationFailed(p0))
+                verificationResult.postValue(VERIFICATION_FAILED)
             }
 
             override fun onCodeSent(verificationId: String, token: ForceResendingToken) {
                 super.onCodeSent(verificationId, token)
                 authInteractor.postVerificationId(verificationId)
-                verificationResult.postValue(VerificationCodeSent(verificationId, token))
+                verificationResult.postValue(VERIFICATION_CODE_SENT)
             }
         }
 
     fun verifyPhone(phone: String) {
         if (phone.isBlank()) {
-            verificationResult.value = VerificationFailed(FirebaseException("Empty phone"))
+            verificationResult.value = VERIFICATION_FAILED
         } else {
             authInteractor.verifyPhone(phone, verificationCallback)
         }
     }
 }
 
-sealed class VerificationResult {
-    class VerificationCompleted(c: PhoneAuthCredential) : VerificationResult()
-    class VerificationFailed(e: FirebaseException) : VerificationResult()
-    class VerificationCodeSent(id: String, rt: ForceResendingToken) : VerificationResult()
+enum class VerificationResult {
+    VERIFICATION_COMPLETED, VERIFICATION_FAILED, VERIFICATION_CODE_SENT
 }

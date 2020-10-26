@@ -3,7 +3,6 @@ package com.belyakov.loginform.data.interactors.auth
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
@@ -17,7 +16,6 @@ class AuthInteractorImpl : AuthInteractor, KoinComponent {
     private val phoneAuthProvider: PhoneAuthProvider by inject()
 
     private var verificationId: String = ""
-    private var credentials: PhoneAuthCredential? = null
 
     init {
         firebaseAuth.setLanguageCode("ru")
@@ -37,17 +35,13 @@ class AuthInteractorImpl : AuthInteractor, KoinComponent {
     }
 
     override fun verifyCode(code: String, completeCallback: OnCompleteListener<AuthResult>) {
-        val creds = credentials ?: PhoneAuthProvider.getCredential(verificationId, code)
+        val creds = PhoneAuthProvider.getCredential(verificationId, code)
         firebaseAuth.signInWithCredential(creds)
             .addOnCompleteListener(Dispatchers.IO.asExecutor(), completeCallback)
     }
 
     override fun postVerificationId(id: String) {
         verificationId = id
-    }
-
-    override fun postCredentials(creds: PhoneAuthCredential) {
-        credentials = creds
     }
 
     override fun logout() {
